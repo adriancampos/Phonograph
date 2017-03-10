@@ -7,7 +7,6 @@ import android.graphics.drawable.Icon;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.appshortcuts.AppShortcutLauncherActivity;
-import com.kabouzeid.gramophone.loader.TopAndRecentlyPlayedTracksLoader;
 
 /**
  * @author Adrian Campos
@@ -18,12 +17,12 @@ public final class TopTracksShortcutType extends BaseShortcutType {
     public TopTracksShortcutType(Context context) {
         super(context);
     }
-    
+
     public ShortcutInfo getShortcutInfo() {
         return new ShortcutInfo.Builder(mContext, ID_PREFIX + "top_tracks")
-                .setShortLabel(mContext.getString(R.string.appshortcut_toptracks_short))
-                .setLongLabel(mContext.getString(R.string.appshortcut_toptracks_long))
-                .setIcon(Icon.createWithResource(mContext, R.drawable.ic_trending_up_white_24dp))
+                .setShortLabel(mContext.getString(R.string.app_shortcut_top_tracks_short))
+                .setLongLabel(mContext.getString(R.string.app_shortcut_top_tracks_long))
+                .setIcon(Icon.createWithResource(mContext, R.drawable.ic_app_shortcut_top_tracks))
                 .setIntent(getPlaySongsIntent(AppShortcutLauncherActivity.ShortcutType.TOP_TRACKS))
                 .build();
     }
